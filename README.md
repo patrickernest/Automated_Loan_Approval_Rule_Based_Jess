@@ -3,6 +3,7 @@
 ## DESCRIPTION
 Loan approval in certain banks and organization are very strict, the process involves collection of data from the customer and running credit analysis metrics to know whether the customer is eligible for a loan. Banks or organizations which loans money usually take a few days or weeks to approve a loan. To automate this process and make things easier and faster for the customer and the banker we can write a Jess Rule Based Program to decide whether a customer is eligible for a loan or not. To write this program we need to first know what exactly we need to decide whether a customer is eligible for the loan he/she asks for. Basic information from the customer has to be collected to make this decision. So in this program, the different metrics that are collected from the user are Age, Gender, Job, Education, Credit Score and Marital Status. After all this information is collected from the user, the user is asked the amount the user desires to borrow and then the Jess Program checks whether the customer is eligible for a loan. The various categories for which a loan can be accepted or rejected are given in comments in the Jess Program (LoanApproval_pat.clp). A flowchart for the Jess Rule Based Automated Loan Approval System is given below:-
 
+![1](https://cloud.githubusercontent.com/assets/10784357/22178306/39ab5eba-dff8-11e6-8259-093c0bf2a212.JPG)
 
 ## KNOWLEDGE BASE
 ### KNOWLEDGE BASE DESCRIPTION
@@ -17,10 +18,12 @@ facts that the user enters. The facts in the program are: -
 * customer-sal :- Salary of the customer if the customer has a job
 * customer-oin :- Other sources of income of the customer is the customer has no job
 * customer-loan :- The loan amount chosen by the customer
+
 ### KNOWLEDGE BASE IN JESS
 NOTE: - The Knowledge base is given below in Jess. The knowledge base is determined by the user,
 as the user enters information, the choices are asserted, hence facts are defined and this is used as
 KB to make decisions.
+
 ```
 (deffunction print-age-gender()
 (printout t "----------|WELCOME TO AUTOMATED LOAN APPROVAL SYSTEM|-------
